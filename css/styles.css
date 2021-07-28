@@ -9,7 +9,9 @@
   --border-radius: 30px;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -434,7 +436,7 @@ a {
 
 .quote__organization {
   color: var(--color-headings);
-  opacity: .4;
+  opacity: 0.4;
   font-size: 1.5rem;
 }
 
@@ -547,7 +549,7 @@ a {
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
-  
+
   .callout__content {
     text-align: left;
   }
@@ -589,4 +591,42 @@ a {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+}
+
+/* Blocks */
+
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 80%);
+}
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
